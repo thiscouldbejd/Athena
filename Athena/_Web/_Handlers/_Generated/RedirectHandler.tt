@@ -1,0 +1,5 @@
+<# Add_Class(a:="Web.Handlers") #>
+<# Add_Behaviour(n:="DbConsumer", p:="Db_DatabaseTypeName:SQL|Db_SettingsName:Athena") #>
+<# Add_Behaviour(n:="HttpHandler", p:="Ha_Reuse:True|Ha_QueryNames:Instance;Event;Redirect|Ha_QueryKeys:i;e;r") #>
+<# Add_Field(n:="Url", t:="System.String", f:="###System.Configuration.ConfigurationManager.AppSettings(""Athena.Url"")") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

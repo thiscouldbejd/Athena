@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Core", m:="Db-Table:tbl_Core_Exercises") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Behaviour(n:="DbRetrievable") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Propertychangeable") #>
+<# Add_Behaviour(n:="Serialisable", p:="Se_Full:False") #>
+<# Add_Field(n:="Id", t:="System.Int32", a:="R", m:="Db-Key|Db-Field:Exercise_Id") #>
+<# Add_Field(n:="Code", t:="System.String", m:="Db-Field:Exercise_Code") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Db-Field:Exercise_Name") #>
+<# Add_Field(n:="Created", t:="System.DateTime", m:="Db-Field:Exercise_Created", f:="###DateTime.Now()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

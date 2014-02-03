@@ -1,0 +1,6 @@
+<# Add_Class(a:="Core", d:="Enum Representing Athena Object Types") #>
+<# Add_Enum(n:="Exercise") #>
+<# Add_Enum(n:="Event") #>
+<# Add_Enum(n:="Option") #>
+<# Add_Enum(n:="Instance") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

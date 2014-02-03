@@ -1,0 +1,8 @@
+<# Add_Class(a:="Core", d:="Enum Representing Athena Analysis Span Types") #>
+<# Add_Enum(n:="Ticks") #>
+<# Add_Enum(n:="Milliseconds") #>
+<# Add_Enum(n:="Seconds") #>
+<# Add_Enum(n:="Minutes") #>
+<# Add_Enum(n:="Hours") #>
+<# Add_Enum(n:="Days") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

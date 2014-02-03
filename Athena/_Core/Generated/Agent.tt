@@ -1,0 +1,9 @@
+<# Add_Class(a:="Core", m:="Db-Table:tbl_Core_Agents") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Details") #>
+<# Add_Behaviour(n:="DbRetrievable") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Details}") #>
+<# Add_Behaviour(n:="Propertychangeable") #>
+<# Add_Behaviour(n:="Serialisable", p:="Se_Full:False") #>
+<# Add_Field(n:="Id", t:="System.Int32", a:="R", m:="Db-Key|Db-Field:Agent_Id") #>
+<# Add_Field(n:="Details", t:="System.String", m:="Db-Field:Agent_String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

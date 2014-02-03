@@ -1,0 +1,11 @@
+<# Add_Class(a:="Core", m:="Db-Table:tbl_Core_Options") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Created") #>
+<# Add_Behaviour(n:="DbRetrievable") #>
+<# Add_Behaviour(n:="Propertychangeable") #>
+<# Add_Behaviour(n:="Serialisable", p:="Se_Full:False") #>
+<# Add_Field(n:="Id", t:="System.Int32", a:="R", m:="Db-Key|Db-Field:Option_Id") #>
+<# Add_Field(n:="Exercise", t:="System.Int32", m:="Db-Field:Option_Exercise") #>
+<# Add_Field(n:="Code", t:="System.String", m:="Db-Field:Option_Code") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Db-Field:Option_Name") #>
+<# Add_Field(n:="Created", t:="System.DateTime", a:="R", m:="Db-Field:Option_Created", f:="###DateTime.Now()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

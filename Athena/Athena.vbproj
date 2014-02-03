@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{780DE4A0-EBD5-486E-A744-3370CAEB8785}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Any CPU</Platform>
+    <OutputType>Library</OutputType>
+    <MyType>Windows</MyType>
+    <RootNamespace>Athena</RootNamespace>
+    <AssemblyName>Athena</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>true</SignAssembly>
+    <!-- Note: If MSBuild.Community.Tasks is not installed on Build Machine -->
+    <!-- Set the MSBuildCommunityTasksPath Property in MSBuild.Community.Tasks.Targets (Packages) to '.' e.g. -->
+    <!-- <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath> -->
+    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.65\tools</MSBuildTasksPath>
+    <NUnitToolPath>Packages\NUnit.Runners.2.6.2\tools</NUnitToolPath>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionCompare>Binary</OptionCompare>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1,TESTING=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hermes">
+      <HintPath>Packages\Hermes.1.0.5145.27934\lib\net40\Hermes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Reference Include="nunit.framework">
+      <HintPath>Packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly\AssemblyInfo.vb" />
+    <Compile Include="_Analysis\Generated\Edge.vb">
+      <DependentUpon>Edge.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Analysis\Generated\Node.vb">
+      <DependentUpon>Node.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Analysis\Generated\Result.vb">
+      <DependentUpon>Result.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Analysis\Partials\Result.vb" />
+    <Compile Include="_Core\Enums\ObjectType.vb">
+      <DependentUpon>ObjectType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Enums\SpanType.vb">
+      <DependentUpon>SpanType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Action.vb">
+      <DependentUpon>Action.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Agent.vb">
+      <DependentUpon>Agent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Event.vb">
+      <DependentUpon>Event.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Exercise.vb">
+      <DependentUpon>Exercise.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Instance.vb">
+      <DependentUpon>Instance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Generated\Option.vb">
+      <DependentUpon>Option.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Partials\Action.vb" />
+    <Compile Include="_Core\Partials\Agent.vb" />
+    <Compile Include="_Core\Partials\Event.vb" />
+    <Compile Include="_Core\Partials\Exercise.vb" />
+    <Compile Include="_Core\Partials\Instance.vb" />
+    <Compile Include="_Core\Partials\Option.vb" />
+    <Compile Include="_Web\Generated\HtmlParser.vb">
+      <DependentUpon>HtmlParser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Web\Partials\HtmlParser.vb" />
+    <Compile Include="_Web\_Handlers\Partials\ContentHandler.vb" />
+    <Compile Include="_Web\_Handlers\Partials\RedirectHandler.vb" />
+    <Compile Include="_Web\_Handlers\_Generated\ContentHandler.vb">
+      <DependentUpon>ContentHandler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Web\_Handlers\_Generated\RedirectHandler.vb">
+      <DependentUpon>RedirectHandler.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assembly" />
+    <Folder Include="_Analysis" />
+    <Folder Include="_Analysis\Generated" />
+    <Folder Include="_Analysis\Partials" />
+    <Folder Include="_Core\Enums" />
+    <Folder Include="_Core\Partials" />
+    <Folder Include="_Web" />
+    <Folder Include="_Web\Generated" />
+    <Folder Include="_Web\Partials" />
+    <Folder Include="_Web\_Handlers" />
+    <Folder Include="_Web\_Handlers\Partials" />
+    <Folder Include="_Web\_Handlers\_Generated" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assembly\AssemblyInfo.vb~">
+      <DependentUpon>AssemblyInfo.vb</DependentUpon>
+    </None>
+    <None Include="Athena.sln" />
+    <None Include="Athena.vbproj" />
+    <None Include="_Analysis\Generated\Edge.tt" />
+    <None Include="_Analysis\Generated\Node.tt" />
+    <None Include="_Analysis\Generated\Result.tt" />
+    <None Include="_Core\Enums\ObjectType.tt" />
+    <None Include="_Core\Enums\SpanType.tt" />
+    <None Include="_Core\Generated\Action.tt" />
+    <None Include="_Core\Generated\Agent.tt" />
+    <None Include="_Core\Generated\Event.tt" />
+    <None Include="_Core\Generated\Exercise.tt" />
+    <None Include="_Core\Generated\Instance.tt" />
+    <None Include="_Core\Generated\Option.tt" />
+    <None Include="_Web\Generated\HtmlParser.tt" />
+    <None Include="_Web\_Handlers\_Generated\ContentHandler.tt" />
+    <None Include="_Web\_Handlers\_Generated\ManageHandler.tt" />
+    <None Include="_Web\_Handlers\_Generated\RedirectHandler.tt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <Import Project="$(MSBuildTasksPath)\MSBuild.Community.Tasks.Targets" Condition=" '$(Configuration)' == 'Debug' " />
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <NUnit WorkingDirectory="$(MSBuildProjectDirectory)" Assemblies="$(TargetDir)$(TargetFileName)" ContinueOnError="false" OutputXmlFile="$(TargetDir)$(TargetName)-results.xml" ToolPath="$(NUnitToolPath)" DisableShadowCopy="true" />
+  </Target>
+</Project>

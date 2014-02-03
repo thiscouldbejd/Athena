@@ -1,0 +1,11 @@
+<# Add_Class(a:="Core", m:="Db-Table:tbl_Core_Instances") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Created") #>
+<# Add_Behaviour(n:="DbRetrievable") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Code}") #>
+<# Add_Behaviour(n:="Propertychangeable") #>
+<# Add_Behaviour(n:="Serialisable", p:="Se_Full:False") #>
+<# Add_Field(n:="Id", t:="System.Int64", a:="R", m:="Db-Key|Db-Field:Instance_Id") #>
+<# Add_Field(n:="Option", t:="System.Int32", m:="Db-Field:Instance_Option") #>
+<# Add_Field(n:="Code", t:="System.String", m:="Db-Field:Instance_Code") #>
+<# Add_Field(n:="Created", t:="System.DateTime", m:="Db-Field:Instance_Created", f:="###DateTime.Now()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>
