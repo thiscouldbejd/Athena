@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
-<package>
+<package >
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>thiscouldbejd</authors>
     <owners>thiscouldbejd</owners>
-    <licenseUrl>https://github.com/thiscouldbejd/Athena/Athena/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/thiscouldbejd/Athena/Athena</projectUrl>
+    <licenseUrl>https://github.com/thiscouldbejd/Athena/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/thiscouldbejd/Athena</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>Copyright 2014</copyright>
-    <tags></tags>
   </metadata>
 </package>
