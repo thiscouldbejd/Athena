@@ -1,0 +1,15 @@
+﻿<# Add_Class(c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Name:athena-analyse|Cm_Description:Athena Analysis Commands") #>
+<# Add_Behaviour(n:="CommandFlag", p:="" & _
+"Pr_CommandFlag:Athena_Source;Restrict_Days;Time_Start;Time_End;Ignore_Options|" & _
+"Fl_Flags:athena-source;restrict-days;time-start;time-end;ignore-options|" & _
+"Fl_Descriptions:Athena Data Source;Restrict Analysis to Timed Periods on Particular Days;Time Restrict Start;Time Restrict End;Ignore Options|" & _
+"Fl_Args:<data source|dsn>;3-Letter Days (e.g. Mon;Tue;Wed;Thu;Fri;Say;Sun);Time (e.g. 09:00);Time (e.g. 15:45);Words to Ignore in Options") #>
+<# Add_Field(n:="Host", t:="Leviathan.Commands.ICommandsExecution") #>
+<# Add_Field(n:="Athena_Source", t:="System.String", d:="Database Connection String") #>
+<# Add_Field(n:="Restrict_Days", t:="System.String()") #>
+<# Add_Field(n:="Time_Start", t:="System.DateTime") #>
+<# Add_Field(n:="Time_End", t:="System.DateTime") #>
+<# Add_Field(n:="Ignore_Options", t:="System.String()") #>
+<# Add_Field(n:="Data", t:="Leviathan.Commands.DataCommands", f:="New DataCommands(Host)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

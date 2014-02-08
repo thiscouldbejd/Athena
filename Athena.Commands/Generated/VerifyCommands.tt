@@ -1,0 +1,11 @@
+<# Add_Class(c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Name:athena-verify|Cm_Description:Athena Verification Commands") #>
+<# Add_Behaviour(n:="CommandFlag", p:="" & _
+"Pr_CommandFlag:Athena_Source|" & _
+"Fl_Flags:athena-source|" & _
+"Fl_Descriptions:Athena Data Source|" & _
+"Fl_Args:<data source|dsn>") #>
+<# Add_Field(n:="Host", t:="Leviathan.Commands.ICommandsExecution") #>
+<# Add_Field(n:="Athena_Source", t:="System.String") #>
+<# Add_Field(n:="Data", t:="Leviathan.Commands.DataCommands", f:="New DataCommands(Host)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

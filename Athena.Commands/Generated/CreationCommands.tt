@@ -1,0 +1,24 @@
+﻿<# Add_Class(c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Name:athena-create|Cm_Description:Athena Creation Commands") #>
+<# Add_Behaviour(n:="CommandFlag", p:="" & _
+"Pr_CommandFlag:Athena_Source;Athena_Url;MailLog;MailSuppress;MailServer;MailServerPort;MailServerSSL;MailServerDomain;MailServerUsername;MailServerPassword;MailFromAddress;MailFromDisplay;MailReplyToAddress;MailReplyToDisplay|" & _
+"Fl_Flags:athena-source;athena-url;mail-log;mail-suppress;mail-server;mail-server-port;mail-server-ssl;mail-server-auth-domain;mail-server-auth-username;mail-server-auth-password;mail-from;mail-from-display;mail-replyto;mail-replyto-display|" & _
+"Fl_Descriptions:Athena Data Source;Athena Url;Mail Logging Directory;Suppress Email Sends;SMTP Server;SMTP Port;SMTP SSL;Authentication Domain;Authentication Username;Authentication Password;From;From Display;Reply To;Reply To Display|" & _
+"Fl_Args:<data source|dsn>;Url;Directory;True/False;;Integer;True/False;;;;;;;") #>
+<# Add_Field(n:="Host", t:="Leviathan.Commands.ICommandsExecution") #>
+<# Add_Field(n:="Athena_Source", t:="System.String") #>
+<# Add_Field(n:="Athena_Url", t:="System.String") #>
+<# Add_Field(n:="MailLog", t:="System.IO.DirectoryInfo") #>
+<# Add_Field(n:="MailSuppress", t:="System.Boolean") #>
+<# Add_Field(n:="MailServer", t:="System.String") #>
+<# Add_Field(n:="MailServerPort", t:="System.Int32", f:="25") #>
+<# Add_Field(n:="MailServerSSL", t:="System.Boolean") #>
+<# Add_Field(n:="MailServerDomain", t:="System.String") #>
+<# Add_Field(n:="MailServerUsername", t:="System.String") #>
+<# Add_Field(n:="MailServerPassword", t:="System.String") #>
+<# Add_Field(n:="MailFromAddress", t:="System.String") #>
+<# Add_Field(n:="MailFromDisplay", t:="System.String") #>
+<# Add_Field(n:="MailReplyToAddress", t:="System.String") #>
+<# Add_Field(n:="MailReplyToDisplay", t:="System.String") #>
+<# Add_Field(n:="Data", t:="Leviathan.Commands.DataCommands", f:="New DataCommands(Host)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>
