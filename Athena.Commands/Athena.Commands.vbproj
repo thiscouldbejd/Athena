@@ -54,10 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Athena">
-      <HintPath>Packages\Athena.1.0.5161.24401\lib\net40\Athena.dll</HintPath>
+      <HintPath>Packages\Athena.1.0.5228.24571\lib\net40\Athena.dll</HintPath>
     </Reference>
     <Reference Include="Hermes">
-      <HintPath>Packages\Hermes.1.0.5156.23580\lib\net40\Hermes.dll</HintPath>
+      <HintPath>Packages\Hermes.1.0.5220.19823\lib\net40\Hermes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Leviathan">
