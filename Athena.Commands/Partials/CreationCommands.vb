@@ -248,6 +248,7 @@ Partial Public Class CreationCommands
 				_manager.SMTP_Server = Hermes.Email.Manager.CreateServer(MailServer)
 				_manager.SMTP_Port = MailServerPort
 				_manager.Use_SSL = MailServerSSL
+				_manager.Verify_SSL = MailServerValidateCertificate
 				If String.IsNullOrEmpty(MailServerUsername) Then
 					_manager.SMTP_Credential = Hermes.Email.Manager.CreateIntegratedCredential()
 				Else
